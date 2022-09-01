@@ -1,3 +1,5 @@
+ingressHost: argocd.lucasalbuq.co
+
 ingress-nginx:
   controller:
     hostPort:
@@ -40,7 +42,7 @@ argo-cd:
     hosts:
       - argocd.lucasalbuq.co
     paths:
-      - /argocd
+      - /
     pathType: Prefix
     extraPaths:
       []

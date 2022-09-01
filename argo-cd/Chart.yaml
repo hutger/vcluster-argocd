@@ -11,6 +11,3 @@ dependencies:
   - name: argocd-image-updater
     version: 0.8.0
     repository: https://argoproj.github.io/argo-helm
-  - name: argocd-notifications
-    version: 1.8.1
-    repository: https://argoproj.github.io/argo-helm
