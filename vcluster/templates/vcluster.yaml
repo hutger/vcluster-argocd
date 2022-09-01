@@ -15,7 +15,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: {{ .namespace }}
+    namespace: argocd
   project: default
   source:
     repoURL: 'https://charts.loft.sh'
