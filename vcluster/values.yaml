@@ -1,0 +1,4 @@
+vClusters:
+  - name: team-1
+    namespace: team-1
+    domain: lucasalbuq.co

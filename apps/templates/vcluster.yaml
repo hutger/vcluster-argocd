@@ -1,19 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
-  namespace: argocd
+  name: vcluster
+  annotations:
+    argocd.argoproj.io/sync-wave: "99"
 spec:
   destination:
-    server: https://kubernetes.default.svc
-    namespace: platform
+    name: in-cluster
+    namespace: argocd
   project: default
   source:
-    path: apps/
+    path: vcluster
     repoURL: https://github.com/hutger/vcluster-argocd.git
-    targetRevision: HEAD
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
