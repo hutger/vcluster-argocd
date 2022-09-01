@@ -1,0 +1,46 @@
+ingress-nginx:
+  controller:
+    hostPort:
+      enabled: false
+    kind: Deployment
+    metrics:
+      enabled: true
+    publishService:
+      enabled: true
+    extraArgs:
+      default-ssl-certificate: "nginx/default-ssl-certificate"
+      enable-ssl-passthrough: true
+    service:
+      enabled: true
+    resources:
+      limits:
+        cpu: 100m
+        memory: 90Mi
+      requests:
+        cpu: 100m
+        memory: 90Mi
+
+argo-cd:
+  dex:
+    enabled: false
+  server:
+    extraArgs:
+      - --insecure
+    config:
+      repositories: |
+        - type: helm
+          name: argo-cd
+          url: https://argoproj.github.io/argo-helm
+
+  ingress:
+    enabled: true
+    annotations: {}
+    labels: {}
+    ingressClassName: "nginx"
+    hosts:
+      - argocd.lucasalbuq.co
+    paths:
+      - /argocd
+    pathType: Prefix
+    extraPaths:
+      []

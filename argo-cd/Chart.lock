@@ -1,0 +1,15 @@
+dependencies:
+- name: ingress-nginx
+  repository: https://kubernetes.github.io/ingress-nginx
+  version: 4.2.3
+- name: argo-cd
+  repository: https://argoproj.github.io/argo-helm
+  version: 5.4.0
+- name: argocd-image-updater
+  repository: https://argoproj.github.io/argo-helm
+  version: 0.8.0
+- name: argocd-notifications
+  repository: https://argoproj.github.io/argo-helm
+  version: 1.8.1
+digest: sha256:91e802c7fd4cfdc55bca7bfdc115671cef9ad40c2ae2100e929393d58a959c77
+generated: "2022-09-01T12:14:41.938807+02:00"
