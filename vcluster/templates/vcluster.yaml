@@ -4,7 +4,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  namespace: {{ .namespace }}
+  namespace: argocd
   name: {{ .name }}
   labels:
     department: development
@@ -15,7 +15,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: argocd
+    namespace: {{ .namespace }}
   project: default
   source:
     repoURL: 'https://charts.loft.sh'
