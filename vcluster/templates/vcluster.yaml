@@ -4,7 +4,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  namespace: {{ .namespace }}
+  namespace: argocd
   name: {{ .name }}
   labels:
     department: development
