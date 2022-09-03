@@ -1,7 +1,4 @@
 vClusters:
-  - name: team-1
-    namespace: team-1
-    domain: lucasalbuq.co
-  - name: team-2
-    namespace: team-2
+  - name: user-1
+    namespace: user-1
     domain: lucasalbuq.co
