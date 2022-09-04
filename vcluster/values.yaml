@@ -2,7 +2,3 @@ vClusters:
   - name: user-1
     namespace: user-1
     domain: lucasalbuq.co
-
-  - name: user-2
-    namespace: user-2
-    domain: lucasalbuq.co
